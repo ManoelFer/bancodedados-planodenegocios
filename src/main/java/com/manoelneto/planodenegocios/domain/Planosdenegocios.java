@@ -2,10 +2,15 @@ package com.manoelneto.planodenegocios.domain;
 
 import java.io.Serializable;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection="planodenegocio")
 public class Planosdenegocios implements Serializable {
 	private static final long serialVersionUID = 1L;
 	/*Serializable para transformar os objetos em bits para que possa ser trafegado em redes*/
 	
+	@Id
 	private String token;
 	private String nomedoplano;
 	private String dataconclusao;
